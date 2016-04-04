@@ -11,6 +11,6 @@ while the queue is not empty
   if the object's minimum moves required to finish the game is smaller than the minimumRequirement, update
   check if the pieces are in the right places (unnecessary coding, can be done by checking minimumMovesNeeded==0)
   if they are, print out the moves and move to the next game
-  else place all the possible next moves into the queue
+  else place all the possible next moves into the queue (if num of moves < 50)
   
 Potential improvement: described in line 12, remove other redundancies, check for game states that can't be solved (odd permutations)
