@@ -1,0 +1,16 @@
+This function utilizes backtracking to find a solution (if there exists one) for the 15 puzzle game. 
+Accept inputs from users
+Based on the input, an object is made with the initial state of the board (stored in a 4x4 2d array), an empty array of moves[MAXMOVE],
+as well as the minimum moves required to finish the game (assuming pieces can stack on top of each other)
+The object is then placed into a queue and the minimum moves required to finish the game is stored as minimumRequirement
+while the queue is not empty
+  remove one object
+  if the object's (minimum moves+num of moves) > MAXMOVE (require more moves than the max allowed) or 
+  its minimum moves > 4 + minimumRequirement (remove game states that do not optimally advance toward the desired states)
+    go back to previous step
+  if the object's minimum moves required to finish the game is smaller than the minimumRequirement, update
+  check if the pieces are in the right places (unnecessary coding, can be done by checking minimumMovesNeeded==0)
+  if they are, print out the moves and move to the next game
+  else place all the possible next moves into the queue
+  
+Potential improvement: described in line 12, remove other redundancies, check for game states that can't be solved (odd permutations)
